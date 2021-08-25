@@ -8,7 +8,6 @@
 #
 
 name: OpenWrt-CI
-
 on:
   workflow_dispatch:
   watch:
@@ -43,8 +42,8 @@ jobs:
           sudo -E apt-get -y autoremove --purge
           sudo -E apt-get clean
           
-      # - name: 自定义插件主题
-        # run: |
+          # - name: 自定义插件主题
+          # run: |
           # cd package
           # mkdir openwrt-packages
           # cd openwrt-packages
@@ -156,4 +155,4 @@ jobs:
           file: ./artifact/firmware/*
           tag: ${{ github.ref }}
           file_glob: true
-          
+  
